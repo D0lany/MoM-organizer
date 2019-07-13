@@ -7,3 +7,6 @@ target
 
 # VSCODE
 .vscode
+
+*.project
+*.classpath
