@@ -18,9 +18,7 @@ import java.io.IOException;
 
 public class FileController {
 
-    public FileController() {};
-
-    public List<String> getFolders(String path) {
+    public static List<String> getFolders(String path) {
         File dir = new File(path);
 
         if(!dir.exists() || !dir.isDirectory()) {
@@ -41,7 +39,7 @@ public class FileController {
         return Arrays.asList(directories);
     }
 
-    public void deleteFiles(String path) {
+    public static void deleteFiles(String path) {
         File dir = new File(path);
 
         if(!dir.exists() || !dir.isDirectory()) {
@@ -61,7 +59,7 @@ public class FileController {
         }
     }
 
-    public void copyFiles(String from, String to) {
+    public static void copyFiles(String from, String to) {
         File fromDir = new File(from);
         File toDir = new File(to);
 
@@ -100,7 +98,7 @@ public class FileController {
         }
     }
 
-    public String buildPath(String one, String another) {
+    public static String buildPath(String one, String another) {
         if(one.endsWith("\\")) {
             one = one.substring(0, one.length()-2);
         } 

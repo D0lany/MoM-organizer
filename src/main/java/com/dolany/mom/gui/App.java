@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.jnativehook.GlobalScreen;
+import org.jnativehook.NativeHookException;
 
 
 public class App extends Application {
@@ -21,6 +23,17 @@ public class App extends Application {
         stage.setTitle("MoM Organizer");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @Override
+    public void stop(){
+        try {
+            if (GlobalScreen.isNativeHookRegistered()) {
+                GlobalScreen.unregisterNativeHook();
+            }
+        } catch (NativeHookException e1) {
+            e1.printStackTrace();
+        }
     }
 
     /**

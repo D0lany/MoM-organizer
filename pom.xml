@@ -25,14 +25,14 @@
       <version>12.0.1</version>
     </dependency>
     <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-graphics</artifactId>
-        <version>12.0.1</version>
-      </dependency>
-    <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
       <version>12.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.1stleg</groupId>
+      <artifactId>jnativehook</artifactId>
+      <version>2.1.0</version>
     </dependency>
   </dependencies>
 
@@ -60,6 +60,18 @@
         <configuration>
             <source>11</source>
             <target>11</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.dolany.mom.gui.Launcher</mainClass>
+            </manifest>
+          </archive>
         </configuration>
       </plugin>
       <plugin>
