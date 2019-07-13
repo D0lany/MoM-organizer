@@ -22,7 +22,6 @@ import com.dolany.mom.common.CustomKeyListener;
 
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
-import org.jnativehook.keyboard.NativeKeyListener;
 
 public class FXMLController {
 

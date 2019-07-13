@@ -4,8 +4,13 @@
   <groupId>com.dolany.mom</groupId>
   <artifactId>mom-organizer</artifactId>
   <name>mom-organizer</name>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1</version>
   <url>http://maven.apache.org</url>
+  <developers>
+    <developer>
+      <name>Dolany</name>
+    </developer>
+  </developers>
   <build>
     <plugins>
       <plugin>
